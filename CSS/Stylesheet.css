@@ -1,0 +1,470 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-weight: 500;
+  /* overflow: hidden; */
+}
+main {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.background {
+  flex-basis: 50%;
+}
+.background img:first-child {
+  height: 100%;
+  width: 100%;
+}
+.background img:last-child {
+  display: none;
+}
+.ATM-Card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(30%, 20%);
+}
+.ATM-Card p {
+  color: #fff;
+}
+.ATM-Front {
+  width: 400px;
+}
+.ATM-Front img:first-child {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.ATM-Front p {
+  position: relative;
+  top: -100px;
+  left: 30px;
+  transform: translate(0, -100%);
+}
+/* .card-input {
+  display: none;
+} */
+.card-num {
+  font-size: 2.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.7em;
+}
+.card-name {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -30px;
+  text-transform: uppercase;
+}
+.ATM-Back {
+  position: absolute;
+  top: 130px;
+  left: 100px;
+  transform: translate(0, 50%);
+}
+.ATM-Back P {
+  position: relative;
+  top: -100px;
+  left: 100px;
+  transform: translate(60%, -180%);
+}
+input {
+  height: 35px;
+  width: 100%;
+  padding: 1rem;
+}
+.card-container {
+  flex-basis: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-input p {
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.CardName {
+  margin-bottom: 1rem;
+}
+.date {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.date div:first-child input {
+  width: 70px;
+}
+.date div:last-child input {
+  width: 100%;
+}
+button {
+  background-color: hsl(278, 68%, 11%);
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+}
+button:hover {
+  background-color: hsl(278, 78%, 19%);
+}
+#errorMsg {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  margin-left: 0.3rem;
+}
+#errorMsgName {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  margin-left: 0.3rem;
+}
+#errorMsgDate {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  margin-left: 0.3rem;
+}
+#errorCVC {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  margin-left: 0.3rem;
+}
+.completed-container {
+  /* display: none; */
+  width: 300px;
+  text-align: center;
+}
+.img-container {
+  margin-bottom: 2rem;
+}
+.completed-container h1 {
+  margin-bottom: 1rem;
+}
+#btn {
+  margin-top: 2rem;
+}
+/* THE STYLING CODE FOR MEDIA QUERY SECTION  */
+@media (max-width: 1296px) {
+  .ATM-Card {
+    top: 0;
+    left: 50px;
+    transform: translate(5%, 20%);
+  }
+}
+@media (max-width: 1247px) {
+  .ATM-Card {
+    top: 0;
+    left: 0;
+    transform: translate(5%, 20%);
+  }
+  .ATM-Back {
+    top: 130px;
+    left: 0;
+    transform: translate(0, 50%);
+  }
+}
+@media (max-width: 1032px) {
+  .card {
+    width: 380px;
+  }
+  .card-num {
+    font-size: 1.8rem;
+    width: 350px;
+    margin-bottom: 2rem;
+  }
+  .card-name {
+    width: 330px;
+  }
+  .ATM-Back p {
+    left: 70px;
+    top: -85px;
+  }
+}
+@media (max-width: 902px) {
+  .card-container {
+    flex-basis: 60%;
+  }
+  .background {
+    width: 100%;
+  }
+  .background img {
+    height: 100%;
+    width: 100%;
+  }
+  .ATM-Card {
+    top: 0;
+    left: 0;
+    transform: translate(15%, 30%);
+  }
+  .card {
+    width: 320px;
+  }
+  .ATM-Front {
+    width: 280px;
+  }
+  .card-num {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 0.7em;
+  }
+  .ATM-Back {
+    top: 100px;
+  }
+  .ATM-Back P {
+    top: -86px;
+    left: 100px;
+    transform: translate(50%, -100%);
+  }
+  .ATM-Front .card-num {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .card-name {
+    width: 280px;
+  }
+}
+@media (max-width: 835px) {
+  .ATM-Card {
+    transform: translate(7%, 30%);
+  }
+}
+@media (max-width: 774px) {
+  .ATM-Card {
+    transform: translate(3%, 30%);
+  }
+}
+@media (max-width: 736px) {
+  .ATM-Card {
+    transform: translate(2%, 30%);
+  }
+}
+@media (max-width: 720px) {
+  main {
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+  }
+
+  .background {
+    width: 100%;
+    height: 240px;
+  }
+
+  .background img[src*="bg-main-desktop"] {
+    display: none;
+  }
+
+  .background img[src*="bg-main-mobile"] {
+    display: block;
+    object-fit: cover;
+    margin-bottom: 5rem;
+  }
+
+  .card-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .ATM-Card {
+    margin-top: -120px; /* Overlap with background */
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column-reverse; /* Back card above front */
+    align-items: center;
+  }
+
+  .ATM-Front,
+  .ATM-Back {
+    position: relative;
+    left: 150px;
+    width: 400px;
+    height: 200px;
+    margin-bottom: 1rem;
+    transform: none; /* Remove transform for clarity */
+  }
+
+  .ATM-Front .card,
+  .ATM-Back .card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ATM-Front img[src*="card-logo"] {
+    top: 15px;
+    left: 15px;
+    width: 60px;
+  }
+
+  .ATM-Front .card-num {
+    font-size: 1.8rem;
+    bottom: 30px;
+    letter-spacing: 1px;
+    width: 350px;
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .ATM-Front .card-name {
+    font-size: 0.8rem;
+    bottom: 15px;
+    width: 350px;
+  }
+  .ATM-Front {
+    left: 100px;
+    top: -5px;
+  }
+  .ATM-Back {
+    margin-left: 0; /* Remove desktop offset */
+    z-index: -1;
+  }
+
+  .ATM-Back p {
+    top: -113px;
+    left: 335px;
+    transform: none; /* Remove transform */
+    font-size: 0.8rem;
+    width: 20px;
+  }
+
+  .card-input {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .card-input input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .date {
+    flex-direction: row; /* Keep horizontal for better form layout */
+    gap: 0.5rem;
+  }
+  .date-flex {
+    display: flex;
+    width: 200px;
+  }
+  .date input#month,
+  .date input#year {
+    width: 100%;
+    /* display: grid; */
+  }
+
+  .card-input button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .completed-container {
+    padding: 0 1rem;
+  }
+
+  .completed-container p:first-child {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .ATM-Card {
+    left: -50px;
+  }
+}
+@media (max-width: 551px) {
+  .ATM-Front,
+  .ATM-Back {
+    width: 350px;
+  }
+  .ATM-Back p {
+    left: 280px;
+  }
+  .ATM-Front .card-num {
+    font-size: 1.55rem;
+    width: 300px;
+  }
+  .ATM-Front .card-name {
+    width: 300px;
+  }
+  .background img[src*="bg-main-mobile"] {
+    margin-bottom: 7rem;
+  }
+}
+@media (max-width: 491px) {
+  .ATM-Front,
+  .ATM-Back {
+    height: 150px;
+    width: 300px;
+  }
+  .ATM-Back p {
+    top: -90px;
+    left: 240px;
+  }
+  .ATM-Front {
+    top: 20px;
+  }
+  .ATM-Front .card-num {
+    font-size: 1.2rem;
+    width: 250px;
+    margin-top: 3rem;
+  }
+  .ATM-Front .card-name {
+    width: 250px;
+  }
+  .background img[src*="bg-main-mobile"] {
+    margin-bottom: 3rem;
+  }
+  .ATM-Card {
+    left: -90px;
+  }
+  .background img[src*="bg-main-mobile"] {
+    margin-bottom: 7rem;
+  }
+}
+@media (max-width: 375px) {
+  .ATM-Front,
+  .ATM-Back {
+    width: 240px;
+    height: 140px;
+  }
+
+  .ATM-Front .card-num {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .ATM-Back p {
+    top: 60px;
+    right: 25px;
+  }
+  .ATM-Card {
+    left: -60px;
+  }
+  .date-flex {
+    width: 150px;
+  }
+  .ATM-Front .card-name {
+    width: 200px;
+  }
+  .ATM-Back p {
+    top: -83px;
+    left: 190px;
+  }
+}
+@media (max-width: 357px) {
+  .ATM-Card {
+    left: -95px;
+  }
+}
